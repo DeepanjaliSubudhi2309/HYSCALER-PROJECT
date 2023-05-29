@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="height: 1000px;">
+        <form id="form3" method="post" action="page3.php?page=3" enctype="multipart/form-data">
+            <div class="three">   
+                <div class="fields">
+                    <h3><u>EDUCATIONAL DETAILS</u></h3>
+                    <div class="input-field">
+                        <label>Upload recent passport size photograph (image size less than 4MB)</label>
+                        <div>
+                            <input type="file" name="file1" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Upload HSC mark sheet (image size less than 4MB)</label>
+                        <div>
+                            <input type="file" name="file2" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Upload SSC mark sheet (image size less than 4MB)</label>
+                        <div>
+                            <input type="file" name="file3" accept="image/*">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>All semesters mark sheet in a single PDF or document (file size less than 10MB)</label>
+                        <div>
+                            <input type="file" name="file4" accept=".pdf,.doc,.docx">
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <!--<button type="button" id="back2">Back</button>-->
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>     
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

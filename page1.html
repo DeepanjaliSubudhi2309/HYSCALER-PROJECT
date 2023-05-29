@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" style="height: 1200px;">
+        <form id="form1" method="post" action="page1.php" >
+            <h3><u>PERSONAL DETAILS</u></h3>
+            <div class="fields">
+                
+                <label>Name*</label>
+                <div>
+                    <input type="text" placeholder="Name" class="capital" name="name" required>
+                    
+                </div> 
+            
+                <label>Date of Birth*</label>
+                <div>
+                    <input type="text" placeholder="yyyy/mm/dd" pattern="\d{4}/\d{2}/\d{2}" name="dob" required oninput="formatDate(this)">
+
+                </div> 
+                
+                <label>Email*</label>
+                <div>
+                    <input type="email" placeholder="Enter your email" class="lower" name="email" id="em" required>
+                </div>
+                
+                <label>Father's name*</label>
+                <div>
+                    <input type="text" placeholder="Name" class="capital" name="fathername" required>
+                    
+                </div>
+                
+                <label>Mother's name*</label>
+                <div>
+                    <input type="text" placeholder="Name" class="capital" name="mothername" required>
+                    
+                </div>
+                
+                <label>Gender*</label>
+                <div>
+                    <select id="gen" name="gender">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                
+                <label>Nationality*</label>
+                <div>
+                    <input type="text" class="capital" name="nationality" id="na" required>
+                </div> 
+                
+                <div>
+                    <label>Home Address*</label>
+                </div> 
+                <input type="text" class="capital" name="address" id="ad" required placeholder="Street Address">
+                <div>
+                    <input type="text" class="capital" name="city" placeholder="City">
+                    <select name="country" id="coun_try" placeholder="Country" required>
+                        <option value="">--Country--</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Libya">Libya</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                    </select>
+                </div>
+                
+                <label>Telephone - Mobile*</label>
+                <div>
+                    <span><select name="countrycode" id="countrycodehome">
+                        <option value="+93">+93</option>
+                        <option value="+61">+61</option>
+                        <option value="+43">+43</option>
+                        <option value="+880">+880</option>
+                        <option value="+975">+975</option>
+                        <option value="+55">+55</option>
+                        <option value="+1">+1</option>
+                        <option value="+86">+86</option>
+                        <option value="+57">+57</option>
+                        <option value="+20">+20</option>
+                        <option value="+33">+33</option>
+                        <option value="+49">+49</option>
+                        <option value="+91">+91</option>
+                        <option value="+62">+62</option>
+                        <option value="+81">+81</option>
+                        <option value="+218">+218</option>
+                        <option value="+960">+960</option>
+                        <option value="+52">+52</option>
+                        <option value="+82">+82</option>
+                        <option value="+94">+94</option></select></span>
+                        <span><input type="tel" name="telemob" placeholder="### ### ####" id="tm" pattern="[0-9]{10}" required></span>
+                </div>
+                
+                <div class="btn-box">
+                    <button type="submit" id="next1">Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function formatDate(input) {
+            // Remove any non-digit characters
+            var cleaned = input.value.replace(/\D/g, '');
+        
+            // Check if the input is empty or less than 8 characters
+            if (cleaned === '' || cleaned.length < 8) {
+                input.setCustomValidity('Please enter a valid date (yyyy/mm/dd)');
+                return;
+            }
+        
+            // Extract year, month, and day
+            var year = cleaned.substring(0, 4);
+            var month = cleaned.substring(4, 6);
+            var day = cleaned.substring(6, 8);
+        
+            // Create the formatted date string
+            var formattedDate = year + '/' + month + '/' + day;
+        
+            // Update the input value with the formatted date
+            input.value = formattedDate;
+        
+            // Clear the custom validation error
+            input.setCustomValidity('');
+        }
+    </script>
+    
+</body>
+</html>

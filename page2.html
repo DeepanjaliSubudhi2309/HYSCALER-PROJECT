@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form2" action="page2.php?page=2" method="post">
+            <div class="sec">
+                <div class="fields">
+                    <h3><u>EDUCATIONAL DETAILS</u></h3>
+                    <label>HSC Institution name*</label>
+                    <div>
+                        <input type="text" name="hscinsti" class="capital" required id="insti"> 
+                    </div>
+                    
+                    <div>
+                        <label>HSC Board*</label>
+                    </div> 
+                    <select name="hscboard" id="ssc" required>
+                        <option value="">--Board--</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSE">ICSE</option>
+                        <option value="State board">State board</option>
+                    </select>
+                    
+                    <label>Percentage in HSC in percentage* </label>
+                    <div>
+                        <input type="text" name="hscper" id="per" required>
+                    </div>  
+                    
+                    <label>cgpa in HSC * </label>
+                    <div>
+                        <input type="text" name="hsccgpa" class="cgpa" step="0.01" min="0" max="10" onchange="validateCGPA(this)" required>
+
+                    </div>  
+
+                    <label>SSC Institution name*</label>
+                    <div>
+                        <input type="text" name="sscinsti" class="capital" id="si" required>
+                    </div>
+                    
+                    <div>
+                        <label>SSC Board*</label>
+                    </div> 
+                    <div>
+                        <select name="sscboard" id="ssc" required>
+                            <option value="">--Board--</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                            <option value="State board">State board</option>
+                        </select>
+                    </div>
+                    
+                    <label>Percentage in SSC in percentage* (Don't use % e.g. 80)</label>
+                    <div>
+                        <input type="text" name="sscper" id="per" required>
+                    </div>
+                    
+                    <label>cgpa in SSC * </label>
+                    <div>
+                        <input type="text" name="ssccgpa" class="cgpa" step="0.01" min="0" max="10" onchange="validateCGPA(this)" required>
+
+                    </div>  
+
+                    <label>Currently pursuing*</label>
+                    <div>
+                        <input type="text" name="current" id="cur" class="capital" required>
+                    </div>
+                    
+                    <label>Current educational institution name*</label>
+                    <div>
+                        <input type="text" name="currentinsti" class="capital" id="cur" required>
+                    </div>
+                    
+                    <label>Overall percentage* </label>
+                    <div>
+                        <input type="text" name="overper" id="ov" required>
+                    </div>
+                    
+                    <label>Overall cgpa* </label>
+                    <div>
+                        <input type="text" name="overcgpa" class="cgpa" step="0.01" min="0" max="10" onchange="validateCGPA(this)" required>
+
+                    </div>
+
+                    <div>
+                        <label>Current backlogs if any*</label>
+                    </div> 
+                    <select name="back" id="log" required>
+                        <option value="">-</option>
+                        <option value="NO">NO</option>
+                        <option value="YES">YES</option>
+                    </select>
+                </div>
+                
+                <div class="btn-box">
+                   
+                    <button type="submit" id="next1">Next</button>
+                   <!-- <button type="button" id="back1">Back</button>
+                    <button type="button" id="next2">Next</button>-->
+                </div>
+            
+            </div>
+              
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function validateCGPA(input) {
+            var cgpa = parseFloat(input.value);
+            if (cgpa > 10) {
+                alert("CGPA should be less than or equal to 10.");
+                input.value = "";
+                input.focus();
+            }
+        }
+    </script>
+    
+</body>
+</html>

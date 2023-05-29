@@ -1,0 +1,234 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(207, 232, 247);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width:670px;
+    height: 1400px;
+    margin: 8% auto;
+    background: linear-gradient(to top, #79c5d1, #d5f3f3);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    
+}
+h3{
+    text-align: center;
+    margin-bottom:40px ;
+    color: black;
+    font-size: xx-large;
+    
+}
+.container form{
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+input[type="email"],
+input[type="number"],
+select, textarea{
+    width: 42%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+input[type="date"]{
+    width: 92%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+#coun_try, #gen{
+    width: 96%;
+}
+#countrycodehome{
+    width: 12%;
+    padding: 12px;
+    margin: 5px;
+}
+#th{
+    width: 78%;
+    padding: 12px;
+    margin: 10px;
+}
+#tm{
+    width: 78%;
+    padding: 12px;
+    margin: 10px;
+}
+#em, #na, #ho, #insti, #hsc, #per, #si, #cur, #ov, #log, #ad{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+input[type="file"], input[type="text"]{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+.capital{
+    text-transform: capitalize;
+}
+.lower{
+    text-transform: lowercase;
+}
+#ssc, #log{
+    width: 96%;
+    padding: 12px;
+    margin: 10px;
+}
+::placeholder{
+    color: rgb(15, 15, 56);
+}
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: #56a7b4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+form button:hover{
+    background: #3e8b97;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+/*#form2{
+    left: 680px;
+    overflow: hidden;
+}
+#form3{
+    left: 1000px;
+}*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(207, 232, 247);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width:670px;
+    height: 1400px;
+    margin: 8% auto;
+    background: linear-gradient(to top, #79c5d1, #d5f3f3);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    
+}
+h3{
+    text-align: center;
+    margin-bottom:40px ;
+    color: black;
+    font-size: xx-large;
+    
+}
+.container form{
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+
+input[type="email"],
+input[type="number"],
+select, textarea{
+    width: 42%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+input[type="date"]{
+    width: 92%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+#coun_try, #gen{
+    width: 96%;
+}
+#countrycodehome{
+    width: 12%;
+    padding: 12px;
+    margin: 5px;
+}
+#tm{
+    width: 77%;
+    padding: 12px;
+    margin: 10px;
+}
+#em, #na, #ho, #insti, #hsc, #per, #si, #cur, #ov, #log, #ad{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+input[type="file"], input[type="text"]{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+.capital{
+    text-transform: capitalize;
+}
+.lower{
+    text-transform: lowercase;
+}
+#ssc, #log{
+    width: 96%;
+    padding: 12px;
+    margin: 10px;
+}
+::placeholder{
+    color: rgb(15, 15, 56);
+}
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: #56a7b4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+form button:hover{
+    background: #3e8b97;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+/*#form2{
+    left: 680px;
+    overflow: hidden;
+}
+#form3{
+    left: 1000px;
+}*/
