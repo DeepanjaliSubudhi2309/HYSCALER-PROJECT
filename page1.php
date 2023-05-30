@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $countrycode = $_POST['countrycode'];
     $telemob = $_POST['telemob'];
 
-    // Store the data in the database (you need to replace the database credentials)
+    
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssssssssssss", $name, $dob, $email, $fathername, $mothername, $gender, $nationality, $address, $pincode, $city, $country, $countrycode, $telemob);
 
     if ($stmt->execute()) {
-        // Redirect to page 2
+        
         header("Location: page2.html");
         exit();
     } else {

@@ -4,15 +4,15 @@ $username = "root";
 $password = "";
 $dbname = "project";
 
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Create educational_details table if it doesn't exist
+
 $sql = "CREATE TABLE IF NOT EXISTS page2new (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     hscinsti VARCHAR(255) NOT NULL,
@@ -32,9 +32,9 @@ $sql = "CREATE TABLE IF NOT EXISTS page2new (
 
 $conn->query($sql);
 
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Retrieve the form data
+    
     $hscinsti = $_POST["hscinsti"];
     $hscboard = $_POST["hscboard"];
     $hscper = $_POST["hscper"];
@@ -49,19 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $overcgpa = $_POST["overcgpa"];
     $back = $_POST["back"];
 
-    // Prepare the SQL statement to insert the data
     $stmt = $conn->prepare("INSERT INTO page2new (hscinsti, hscboard, hscper, hsccgpa, sscinsti, sscboard, sscper, ssccgpa, current, currentinsti, overper, overcgpa, back)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssddssddssdds", $hscinsti, $hscboard, $hscper, $hsccgpa, $sscinsti, $sscboard, $sscper, $ssccgpa, $current, $currentinsti, $overper, $overcgpa, $back);
 
     if ($stmt->execute()) {
-        // Data inserted successfully
+        
         $stmt->close();
         $conn->close();
         header("Location: page3.html");
         exit;
     } else {
-        // Error inserting data
+        
         echo "Error inserting data: " . $conn->error;
     }
 }
