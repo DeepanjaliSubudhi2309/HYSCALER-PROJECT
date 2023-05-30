@@ -10,6 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gender = $_POST['gender'];
     $nationality = $_POST['nationality'];
     $address = $_POST['address'];
+    $pincode = $_POST['pincode'];
     $city = $_POST['city'];
     $country = $_POST['country'];
     $countrycode = $_POST['countrycode'];
@@ -26,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO page1 (name, dob, email, fathername, mothername, gender, nationality, address, city, country, countrycode, telemob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO page1 (name, dob, email, fathername, mothername, gender, nationality, address, pincode, city, country, countrycode, telemob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssssssss", $name, $dob, $email, $fathername, $mothername, $gender, $nationality, $address, $city, $country, $countrycode, $telemob);
+    $stmt->bind_param("sssssssssssss", $name, $dob, $email, $fathername, $mothername, $gender, $nationality, $address, $pincode, $city, $country, $countrycode, $telemob);
 
     if ($stmt->execute()) {
         // Redirect to page 2

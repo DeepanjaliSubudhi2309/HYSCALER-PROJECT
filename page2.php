@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // Create educational_details table if it doesn't exist
-$sql = "CREATE TABLE  page2new (
+$sql = "CREATE TABLE IF NOT EXISTS page2new (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     hscinsti VARCHAR(255) NOT NULL,
     hscboard VARCHAR(50) NOT NULL,
