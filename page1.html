@@ -59,7 +59,7 @@
                     <label>Home Address*</label>
                 </div> 
                 <input type="text" class="capital" name="address" id="ad" required placeholder="Street Address">
-                <input type="number" class="pincode" name="pincode" id="ad"  required placeholder="pincode">
+                <input type="text" class="pincode" name="pincode" id="ad"  required placeholder="pincode">
                 <div>
                     <input type="text" class="capital" name="city" placeholder="City">
                     <select name="country" id="coun_try" placeholder="Country" required>
@@ -150,7 +150,7 @@
             var pincode = document.getElementsByClassName("pincode")[0].value;
             if (pincode.length !== 6) {
                 alert("Pincode should be exactly 6 digits.");
-                return false; // Prevent form submission
+                return false; 
             }
         }
     </script>
